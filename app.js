@@ -23,8 +23,8 @@ const globalErrorHandler = require('./controllers/errorController');
 const app = express();
 
 //pug integration
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'pug');
+// app.set('views', path.join(__dirname, 'views'));
 
 //Global Middleware
 
@@ -100,7 +100,7 @@ app.use((req, res, next) => {
 // // app.route("/api/v1/users").get(getUsers).post(createUser);
 // userRouter.route("/").get(getUsers).post(createUser);
 // userRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
-app.use('/', viewRouter);
+// app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
