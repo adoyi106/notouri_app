@@ -27,6 +27,10 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 //Global Middleware
+
+app.use(cors())
+
+app.options("*", cors())
 //read static files
 app.use(express.static(`${__dirname}/public`));
 app.use(helmet());
